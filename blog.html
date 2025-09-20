@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadet Preparatory & International Secondary School| Blog Post</title>
+    <meta name="description"
+        content="Login page for students of Zadet Preparatory & International Secondary School to access their academic information and resources.">
+    <meta name="keywords" content="Zadet student login, school login Freetown, Sierra Leone school portal">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<style>
+    h1,
+    h2 {
+        color: var(--primary-color);
+        text-align: center;
+    }
+
+
+    /* Announcement Cards */
+    .card {
+        background: var(--bg-white);
+        padding: 25px;
+        margin-bottom: 20px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-md);
+        transition: var(--transition);
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .card h3 {
+        margin-top: 0;
+        color: var(--secondary-color);
+    }
+
+    .card small {
+        color: var(--text-light);
+    }
+
+    /* Slider Styles */
+    .slider {
+        position: relative;
+        overflow: hidden;
+        margin-top: 30px;
+    }
+
+    .slide {
+        display: none;
+        padding: 30px 20px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-md);
+        animation: fade 0.8s;
+        text-align: center;
+        transition: var(--transition);
+    }
+
+    .slide.active {
+        display: block;
+    }
+
+    /* Testimonials slider gradient background */
+    .testimonial-slide {
+       background: var(--bg-white);
+        color: #fff;
+    }
+
+    /* Students & Teachers slide cards */
+    .student-slide {
+        border-left: 6px solid var(--primary-color);
+        background: var(--bg-white);
+    }
+
+    .teacher-slide {
+        border-left: 6px solid var(--secondary-color);
+        background: var(--bg-white);
+    }
+
+    .slide img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+        border: 3px solid #fff;
+        transition: var(--transition);
+    }
+
+    .student-slide img {
+        border-color: var(--primary-color);
+    }
+
+    .teacher-slide img {
+        border-color: var(--secondary-color);
+    }
+
+    .slide p {
+        font-style: italic;
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .author {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    /* Level Badge */
+    .badge {
+        display: inline-block;
+        padding: 3px 10px;
+        margin-top: 8px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        border-radius: 8px;
+        color: #fff;
+    }
+
+    .badge.jss {
+        background: var(--primary-color);
+    }
+
+    .badge.sss {
+        background: var(--secondary-color);
+    }
+
+    .badge.primary {
+        background: var(--accent-color);
+    }
+
+    /* Slider buttons */
+    .slider-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        font-size: 1.5rem;
+        padding: 8px 12px;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        z-index: 10;
+        transition: var(--transition);
+    }
+
+    .slider-btn:hover {
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev-btn {
+        left: 10px;
+    }
+
+    .next-btn {
+        right: 10px;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: 0.4;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Zadet International School </h1>
+            <i class="ri-menu-line hamburger" onclick="toggleMenu()"></i>
+
+            <nav class="navbar">
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="blog-section">
+        <div class="blog-container">
+            <h2>School Blog</h2>
+            <p>
+                Welcome to the Zadet Preparatory & International Secondary School blog! Here, we share the latest news,
+                updates, and insights about our school community. Stay tuned for articles on educational trends, student
+                achievements, upcoming events, and more.
+            </p>
+
+        </div>
+
+    </section>
+    <div class="blog-bottom">
+        <!-- Announcements -->
+<section>
+    <h2>School Announcements</h2>
+    <div class="card">
+      <h3>School Resumes - September 25th</h3>
+      <p>We are excited to welcome students back for the new term. Kindly ensure all school materials are ready.</p>
+      <small>Posted on: Sept 10, 2025</small>
+    </div>
+    <div class="card">
+      <h3>Inter-House Sports Competition</h3>
+      <p>Join us on October 12th for our annual sports competition. Parents and guardians are warmly invited.</p>
+      <small>Posted on: Sept 5, 2025</small>
+    </div>
+</section>
+
+<section>
+<h2>Students & Teachers of the Month Award</h2>
+<div class="slider" id="monthSlider">
+  <div class="slide student-slide active">
+    <img src="profile pic.PNG" alt="Student JSS">
+    <p><strong>Jane Kamara</strong></p>
+    <span class="badge jss">JSS</span>
+    <p>Best Student</p>
+  </div>
+  <div class="slide student-slide">
+    <img src="badge.PNG" alt="Student SSS">
+    <p><strong>Mohamed Conteh</strong></p>
+    <span class="badge sss">SSS</span>
+    <p>Best Student</p>
+  </div>
+  <div class="slide student-slide">
+    <img src="profile pic.PNG" alt="Student Primary">
+    <p><strong>Susan Sesay</strong></p>
+    <span class="badge primary">Primary</span>
+    <p>Best Student</p>
+  </div>
+  <div class="slide teacher-slide">
+    <img src="badge.PNG" alt="Teacher JSS">
+    <p><strong>Mr. Koroma</strong></p>
+    <span class="badge jss">JSS</span>
+    <p>Best Teacher</p>
+  </div>
+  <div class="slide teacher-slide">
+    <img src="badge.PNG" alt="Teacher SSS">
+    <p><strong>Mrs. Kamara</strong></p>
+    <span class="badge sss">SSS</span>
+    <p>Best Teacher</p>
+  </div>
+  <div class="slide teacher-slide">
+    <img src="profile pic.PNG" alt="Teacher Primary">
+    <p><strong>Mr. Sesay</strong></p>
+    <span class="badge primary">Primary</span>
+    <p>Best Teacher</p>
+  </div>
+
+  <button class="slider-btn prev-btn">&#10094;</button>
+  <button class="slider-btn next-btn">&#10095;</button>
+</div>
+</section>
+
+<!-- Testimonials Slider -->
+<section>
+<h2>What Poeple say about us ?</h2>
+<div class="slider" id="testimonialSlider">
+  <div class="slide testimonial-slide active">
+    <img src="profile pic.PNG" alt="Parent">
+    <p>"Zadet Preparatory & International Secondary School has transformed my child’s academic journey. The teachers are truly supportive."</p>
+    <div class="author">— Mrs. Mariama Kamara, Parent</div>
+  </div>
+  <div class="slide testimonial-slide">
+    <img src="badge.PNG" alt="Student">
+    <p>"The school environment encourages me to study and grow. I’m proud to be a student here!"</p>
+    <div class="author">— Samuel, Student</div>
+  </div>
+  <div class="slide testimonial-slide">
+    <img src="profile pic.PNG" alt="Teacher">
+    <p>"Teaching at Zadet has been rewarding. The management is supportive, and the students are eager to learn."</p>
+    <div class="author">— Mr. Conteh, Teacher</div>
+  </div>
+
+  <button class="slider-btn prev-btn">&#10094;</button>
+  <button class="slider-btn next-btn">&#10095;</button>
+</div>
+</section>
+
+<!-- Students & Teachers of the Month Slider -->
+
+
+    </div>
+    
+
+
+
+
+</body>
+<script>
+    function setupSlider(sliderId) {
+  const slider = document.getElementById(sliderId);
+  const slides = slider.querySelectorAll(".slide");
+  const prevBtn = slider.querySelector(".prev-btn");
+  const nextBtn = slider.querySelector(".next-btn");
+  let index = 0;
+
+  function showSlide(n) {
+    slides.forEach(s => s.classList.remove("active"));
+    slides[n].classList.add("active");
+  }
+
+  prevBtn.addEventListener("click", ()=> {
+    index = (index -1 + slides.length) % slides.length;
+    showSlide(index);
+  });
+
+  nextBtn.addEventListener("click", ()=> {
+    index = (index +1) % slides.length;
+    showSlide(index);
+  });
+
+  // Swipe support
+  let startX = 0;
+  slider.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+  });
+
+  slider.addEventListener('touchend', e => {
+    let endX = e.changedTouches[0].clientX;
+    if(endX - startX > 50){ // swipe right
+      index = (index -1 + slides.length) % slides.length;
+      showSlide(index);
+    } else if(startX - endX > 50){ // swipe left
+      index = (index +1) % slides.length;
+      showSlide(index);
+    }
+  });
+
+  // Autoplay every 5s
+  setInterval(() => {
+    index = (index +1) % slides.length;
+    showSlide(index);
+  }, 5000);
+}
+
+setupSlider("testimonialSlider");
+setupSlider("monthSlider");
+
+</script>
+
+
+
+</html>
