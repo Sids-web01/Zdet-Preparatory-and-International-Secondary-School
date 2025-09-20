@@ -1404,7 +1404,7 @@ header {
 }
 
 .blog-bottom {
-    width: 100%;
+    width: 90%;
     background: linear-gradient(120deg, rgba(37, 99, 235, 0.05) 0%, rgba(124, 58, 237, 0.03) 100%);
    
     display: flex;
