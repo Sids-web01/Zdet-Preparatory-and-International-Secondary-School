@@ -306,6 +306,11 @@
 
 </body>
 <script>
+    function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('show');
+}  
+
     function setupSlider(sliderId) {
   const slider = document.getElementById(sliderId);
   const slides = slider.querySelectorAll(".slide");
