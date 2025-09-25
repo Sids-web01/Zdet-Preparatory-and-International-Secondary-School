@@ -127,7 +127,7 @@ function displayResults(student) {
 
     if (student.Image && student.Image.trim() !== "") {
         let imageURL = student.Image.trim();
-        console.log("Original Image URL from Google Sheets:", imageURL);
+        // console.log("Original Image URL from Google Sheets:", imageURL);
 
         // ✅ Convert Google Drive link if needed
         const match = imageURL.match(/\/d\/(.+?)\//);
@@ -135,7 +135,7 @@ function displayResults(student) {
             const fileID = match[1];
             // Use alternative Google link
             imageURL = `https://lh3.googleusercontent.com/d/${fileID}=s400`;
-            console.log("Converted Google Drive Image URL:", imageURL);
+            // console.log("Converted Google Drive Image URL:", imageURL);
         }
 
         studentImage.src = imageURL;
@@ -192,57 +192,3 @@ function goBack() {
 
 
 
-// staff slider
-  const slides = document.querySelector('.slides');
-    const slideItems = document.querySelectorAll('.slide');
-    const prevBtn = document.querySelector('.prev');
-    const nextBtn = document.querySelector('.next');
-    const dotsContainer = document.querySelector('.dots');
-
-    let index = 0;
-    let slideInterval;
-
-    // Create dots dynamically
-    slideItems.forEach((_, i) => {
-      const dot = document.createElement('span');
-      if (i === 0) dot.classList.add('active');
-      dot.addEventListener('click', () => moveToSlide(i));
-      dotsContainer.appendChild(dot);
-    });
-    const dots = document.querySelectorAll('.dots span');
-
-    function updateDots() {
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[index].classList.add('active');
-    }
-
-    function moveToSlide(i) {
-      index = (i + slideItems.length) % slideItems.length;
-      slides.style.transform = `translateX(-${index * 100}%)`;
-      updateDots();
-    }
-
-    function nextSlide() {
-      moveToSlide(index + 1);
-    }
-
-    function prevSlide() {
-      moveToSlide(index - 1);
-    }
-
-    prevBtn.addEventListener('click', prevSlide);
-    nextBtn.addEventListener('click', nextSlide);
-
-    function startAutoSlide() {
-      slideInterval = setInterval(nextSlide, 4000);
-    }
-
-    function stopAutoSlide() {
-      clearInterval(slideInterval);
-    }
-
-    document.querySelector('.slider').addEventListener('mouseenter', stopAutoSlide);
-    document.querySelector('.slider').addEventListener('mouseleave', startAutoSlide);
-
-    startAutoSlide();
-  
