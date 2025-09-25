@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zadet-preparatory-and-international-secondary-school.vercel.app/sitemap.xml
